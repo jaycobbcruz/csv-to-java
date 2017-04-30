@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="csv-to-java:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="csvtojava.war">
-      <element id="artifact" artifact-name="csv-to-java:war exploded" />
-    </root>
-  </artifact>
-</component>
