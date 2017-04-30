@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.CaseFormat;
 import org.apache.commons.lang3.StringUtils;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -27,6 +28,10 @@ public class CsvToObject {
     private List<String> records;
     private final String dataDelimiter;
     private final Function<String, String> columnNameConverter;
+
+    public CsvToObject(final File file) {
+        this(file.toPath(), DEFAULT_DATA_DELIMITER, true, CaseFormat.UPPER_UNDERSCORE);
+    }
 
     public CsvToObject(final Path file) {
         this(file, DEFAULT_DATA_DELIMITER, true, CaseFormat.UPPER_UNDERSCORE);

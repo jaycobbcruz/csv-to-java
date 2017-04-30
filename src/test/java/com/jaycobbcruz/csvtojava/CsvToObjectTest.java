@@ -7,17 +7,16 @@ import org.junit.Test;
 import java.io.File;
 import java.math.BigDecimal;
 import java.net.URISyntaxException;
-import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class CsvToObjectTest {
 
-    private Path testFile;
+    private File testFile;
 
     @Before
     public void init() throws URISyntaxException {
-        this.testFile = new File(this.getClass().getResource("/test-file.csv").toURI()).toPath();
+        this.testFile = new File(this.getClass().getResource("/test-file.csv").toURI());
         Assert.assertNotNull(testFile);
     }
 
